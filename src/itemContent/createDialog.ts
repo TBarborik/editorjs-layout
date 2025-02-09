@@ -1,7 +1,8 @@
 import type {OutputData} from "@editorjs/editorjs";
 import {v4 as uuidv4} from "uuid";
 import type {LayoutBlockToolConfig} from "../LayoutBlockTool";
-import {Modal} from "bootstrap";
+import $ from "jquery";
+import "bootstrap/js/dist/modal";
 
 export const createDialog = ({
 								 EditorJS,
@@ -54,6 +55,7 @@ export const createDialog = ({
 
 	const bsDialogBody = document.createElement("div");
 	bsDialogBody.classList.add("modal-body");
+	bsDialogBody.style.setProperty("min-height", "70vh");
 	bsDialogBody.style.setProperty("max-height", "calc(100vh - 100px)");
 
 	bsDialogContent.append(bsDialogBody, bsDialogFooter);
@@ -73,28 +75,34 @@ export const createDialog = ({
 
 	document.body.appendChild(bsDialog);
 
-	const modal = new Modal(bsDialog, {
+	const dialogElement = $(bsDialog);
+
+	const modal = dialogElement.modal({
 		backdrop: "static"
 	});
 
 	const abortController = new AbortController();
 
+	const dispose = () => {
+		editorJS.destroy();
+		dialogElement.modal("dispose");
+		abortController.abort();
+
+		document.body.removeChild(bsDialog);
+	}
+
 	bsCloseButton.addEventListener("click", () => {
-		modal.hide();
+		dialogElement.modal("hide");
 	}, {signal: abortController.signal});
 
 	bsSaveButton.addEventListener("click", async () => {
 		const editorJSData = await editorJS.save();
 		onClose?.({editorJSData});
-		modal.hide();
+		dialogElement.modal("hide");
 	}, {signal: abortController.signal});
 
-	bsDialog.addEventListener("hidden.bs.modal", async () => {
-		editorJS.destroy();
-		modal.dispose();
-		abortController.abort();
-
-		document.removeChild(bsDialog);
+	dialogElement.on("hidden.bs.modal", () => {
+		dispose();
 	});
 
 	return modal;

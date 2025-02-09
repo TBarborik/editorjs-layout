@@ -12,4 +12,4 @@ export type { LayoutBlockItemData, ValidatedLayoutBlockItemData } from "./item";
 export type {
   LayoutBlockItemContentData,
   ValidatedLayoutBlockItemContentData,
-} from "./itemContent";
+} from "./itemContent/itemContent";

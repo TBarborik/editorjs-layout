@@ -20,13 +20,17 @@
   "license": "MIT",
   "author": "Tom Barbořík <tom@codethatworks.dev>, Tomoyuki Hata <hato6502@gmail.com>",
   "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "webpack",
     "test": "tsc --noEmit"
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.19.1",
-    "bootstrap": "^4.6.2"
+    "bootstrap": "^4.6.2",
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
     "@types/uuid": "^8.3.0",
@@ -35,7 +39,9 @@
     "typescript": "^4.1.3",
     "uuid": "^8.3.2",
     "webpack": "^5.17.0",
-    "webpack-cli": "^4.4.0"
+    "webpack-cli": "^4.4.0",
+    "@types/bootstrap": "^4.6.6",
+    "@types/jquery": "^3.5.32"
   },
   "release": {
     "branches": [

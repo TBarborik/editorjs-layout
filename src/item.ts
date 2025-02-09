@@ -1,6 +1,6 @@
 import type { RenderContext } from "./container";
-import { renderItemContent } from "./itemContent";
-import type { LayoutBlockItemContentData } from "./itemContent";
+import { renderItemContent } from "./itemContent/itemContent";
+import type { LayoutBlockItemContentData } from "./itemContent/itemContent";
 
 interface LayoutBlockItemData {
   type: "item";

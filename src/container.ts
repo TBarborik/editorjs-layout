@@ -5,7 +5,7 @@ import type {
 } from "./LayoutBlockTool";
 import { renderItem } from "./item";
 import type { LayoutBlockItemData, ValidatedLayoutBlockItemData } from "./item";
-import type { LayoutBlockItemContentData } from "./itemContent";
+import type { LayoutBlockItemContentData } from "./itemContent/itemContent";
 
 interface LayoutBlockContainerData {
   type: "container";

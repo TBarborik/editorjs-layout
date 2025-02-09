@@ -37,7 +37,7 @@ const renderItemContent = ({
         data,
         editorJSConfig,
         onClose: async ({ editorJSData }: any) =>
-          dispatchData(({ itemContent, layout }) => ({
+          dispatchData(({ itemContent, layout }: any) => ({
             itemContent: {
               ...itemContent,
               [itemContentId]: {
