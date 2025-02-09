@@ -19,10 +19,7 @@
   },
   "license": "MIT",
   "author": "Tom Barbořík <tom@codethatworks.dev>, Tomoyuki Hata <hato6502@gmail.com>",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "main": "src/index.js",
   "scripts": {
     "build": "webpack",
     "test": "tsc --noEmit"
