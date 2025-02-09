@@ -10,15 +10,15 @@
     "tool"
   ],
   "bugs": {
-    "url": "https://github.com/hata6502/editorjs-layout/issues"
+    "url": "https://github.com/TBarborik/editorjs-layout.git"
   },
-  "repository": "https://github.com/hata6502/editorjs-layout",
+  "repository": "https://github.com/TBarborik/editorjs-layout.git",
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/hata6502"
   },
   "license": "MIT",
-  "author": "Tomoyuki Hata <hato6502@gmail.com>",
+  "author": "Tom Barbořík <tom@codethatworks.dev>, Tomoyuki Hata <hato6502@gmail.com>",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -28,7 +28,8 @@
     "test": "tsc --noEmit"
   },
   "dependencies": {
-    "@editorjs/editorjs": "^2.19.1"
+    "@editorjs/editorjs": "^2.19.1",
+    "bootstrap": "^4.6.2",
   },
   "devDependencies": {
     "@types/uuid": "^8.3.0",

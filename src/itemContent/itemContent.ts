@@ -36,7 +36,7 @@ const renderItemContent = ({
         EditorJS,
         data,
         editorJSConfig,
-        onClose: async ({ editorJSData }) =>
+        onClose: async ({ editorJSData }: any) =>
           dispatchData(({ itemContent, layout }) => ({
             itemContent: {
               ...itemContent,
@@ -48,8 +48,7 @@ const renderItemContent = ({
           })),
       });
 
-      document.body.append(dialog);
-      dialog.showModal();
+      dialog.show();
     });
   }
 

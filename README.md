@@ -1,4 +1,8 @@
-# editorjs-layout
+# This is fork
+This is forked repo with modification for internal tool including mostly bootstrap integration instead of native dialog since tooltips and other thing are hard to come by in tooltip
+when are placed outside dialog.
+
+## editorjs-layout
 
 Layout block tool for Editor.js.
 
