@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "author": "Tom Barbořík <tom@codethatworks.dev>, Tomoyuki Hata <hato6502@gmail.com>",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
