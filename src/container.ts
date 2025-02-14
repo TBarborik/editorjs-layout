@@ -53,13 +53,15 @@ const renderContainer = ({
 		while (el && !el.draggable)
 			el = el.parentElement;
 
-		el?.classList.add("is-dragging");
-		draggedElement = el;
+		if (el) {
+			el.classList.add("is-dragging");
+			draggedElement = el;
+		}
+
+		return false;
 	};
 
 	const handleDragOver = (ev: DragEvent) => {
-		ev.preventDefault();
-
 		let el = ev.target as HTMLElement | null;
 		while (el !== null && el.parentElement !== wrapper)
 			el = el.parentElement;
@@ -77,6 +79,7 @@ const renderContainer = ({
 
 	const handleDragEnd = (ev: DragEvent) => {
 		if (draggedElement) {
+			ev.preventDefault();
 			draggedElement.classList.remove("is-dragging");
 			draggedElement.querySelectorAll(".btn").forEach(btn => btn.classList.remove("d-none"));
 
