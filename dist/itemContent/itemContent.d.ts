@@ -11,4 +11,4 @@ interface RenderItemContentProps extends RenderContext {
 }
 declare const renderItemContent: ({ EditorJS, data, dispatchData, editorJSConfig, itemContentId, readOnly, }: RenderItemContentProps) => HTMLDivElement;
 export { renderItemContent };
-export type { LayoutBlockItemContentData, RenderItemContentProps, ValidatedLayoutBlockItemContentData, };
+export type { LayoutBlockItemContentData, RenderItemContentProps, ValidatedLayoutBlockItemContentData };

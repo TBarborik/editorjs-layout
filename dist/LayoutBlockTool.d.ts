@@ -1,7 +1,7 @@
 import type EditorJS from "@editorjs/editorjs";
 import type { BlockTool, BlockToolConstructorOptions, EditorConfig } from "@editorjs/editorjs";
 import type { LayoutBlockContainerData, ValidatedLayoutBlockContainerData } from "./container";
-import type { LayoutBlockItemContentData, ValidatedLayoutBlockItemContentData } from "./itemContent/itemContent";
+import type { LayoutBlockItemContentData, ValidatedLayoutBlockItemContentData } from "./itemContent";
 interface LayoutBlockToolConfig {
     EditorJS: typeof EditorJS;
     editorJSConfig: Omit<EditorConfig, "holder" | "data" | "minHeight" | "readOnly">;

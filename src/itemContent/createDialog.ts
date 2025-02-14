@@ -1,6 +1,6 @@
 import type {OutputData} from "@editorjs/editorjs";
 import {v4 as uuidv4} from "uuid";
-import type {LayoutBlockToolConfig} from "../LayoutBlockTool";
+import type {LayoutBlockToolConfig} from '../LayoutBlockTool';
 import $ from "jquery";
 import "bootstrap/js/dist/modal";
 

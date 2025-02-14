@@ -12,7 +12,7 @@ import type {
 import type {
   LayoutBlockItemContentData,
   ValidatedLayoutBlockItemContentData,
-} from "./itemContent/itemContent";
+} from "./itemContent";
 
 interface LayoutBlockToolConfig {
   EditorJS: typeof EditorJS;

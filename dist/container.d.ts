@@ -1,6 +1,6 @@
 import type { LayoutBlockToolConfig, LayoutBlockToolDispatchData } from "./LayoutBlockTool";
 import type { LayoutBlockItemData, ValidatedLayoutBlockItemData } from "./item";
-import type { LayoutBlockItemContentData } from "./itemContent/itemContent";
+import type { LayoutBlockItemContentData } from "./itemContent";
 interface LayoutBlockContainerData {
     type: "container";
     id: Element["id"];
@@ -23,4 +23,4 @@ interface RenderContainerProps extends RenderContext {
 }
 declare const renderContainer: ({ data, itemContentData, ...context }: RenderContainerProps) => HTMLDivElement;
 export { renderContainer };
-export type { LayoutBlockContainerData, RenderContainerProps, RenderContext, ValidatedLayoutBlockContainerData, };
+export type { LayoutBlockContainerData, RenderContainerProps, RenderContext, ValidatedLayoutBlockContainerData };

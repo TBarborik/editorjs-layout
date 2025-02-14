@@ -1,5 +1,5 @@
 import type { OutputData } from "@editorjs/editorjs";
-import type { LayoutBlockToolConfig } from "../LayoutBlockTool";
+import type { LayoutBlockToolConfig } from '../LayoutBlockTool';
 import "bootstrap/js/dist/modal";
 export declare const createDialog: ({ EditorJS, data, editorJSConfig, onClose }: {
     EditorJS: LayoutBlockToolConfig["EditorJS"];

@@ -22,6 +22,7 @@ const renderItem = ({ data, itemContentData, ...context }: RenderItemProps) => {
 
   wrapper.id = data.id;
   wrapper.className = data.className;
+  wrapper.dataset.contentId = data.itemContentId;
   wrapper.style.cssText = data.style;
 
   const editorJSData = itemContentData[data.itemContentId] ?? { blocks: [] };
